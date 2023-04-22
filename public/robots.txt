@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.yasier.in
+
+# Sitemaps
+Sitemap: https://www.yasier.in/sitemap.xml
