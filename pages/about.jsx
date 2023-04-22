@@ -3,6 +3,7 @@ import Image from "next/image";
 // import CategoryCard from "../components/About-cat";
 import aboutImage from "../public/image.jpg";
 import { useTheme } from "next-themes";
+import CategoryCard from "@/components/CategoryCard";
 
 export default function About() {
   const { theme, setTheme } = useTheme();
@@ -39,7 +40,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          {/* <CategoryCard /> */}
+          <CategoryCard />
           <div className=" text-[0.92rem] md:text-base md:text-md lg:text-lg xl:text-xl mx-auto font-normal dark:text-white text-gray-900 ">
             <p className="mt-6 mb-12">
               A Front-end Engineer who develops modern, reactive, and
