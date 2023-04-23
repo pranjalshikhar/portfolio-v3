@@ -11,7 +11,7 @@ export default function About() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   return (
-    <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto">
+    <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
       <Head>
         <title> About Me </title>
       </Head>
@@ -44,7 +44,7 @@ export default function About() {
             </div>
           </div>
           <CategoryCard />
-          <div className=" text-[0.92rem] md:text-base md:text-md lg:text-lg xl:text-xl mx-auto font-normal dark:text-white text-gray-900 ">
+          <div className=" text-[0.92rem] md:text-base md:text-md lg:text-lg xl:text-xl mx-auto font-light dark:text-white text-gray-900 ">
             <p className="mt-6 mb-12">
               A Front-end Engineer who develops modern, reactive, and
               user-friendly web applications using the latest technologies. 🚀 I
