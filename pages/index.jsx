@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
 import Blob from "@/components/Blob";
 import Image from "next/image";
-import main from "../public/image.jpg";
+import main from "../public/Avatar.svg";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -10,7 +10,21 @@ export default function Home() {
       <div className="lg:min-h-screen px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[90rem]">
         <div className="lg:h-screen 2xl:h-max max-w-[90rem] mx-auto">
           <Blob />
-          <div className="flex flex-col justify-center lg:flex-row md:pt-12 lg:space-x-20 items-center lg:justify-between">
+          <div className="flex flex-row justify-start items-center mt-20">
+            <Image src={main} alt="pranjal" width="100" height="100" />
+            <div className="flex flex-col ml-4">
+              <h2 className="text-3xl font-bold md:text-xl">pranjal shikhar</h2>
+              <h4 className="text-gray-400 font-semibold">developer</h4>
+            </div>
+          </div>
+          <div className="mt-12 leading-8 text-2xl font-out">
+            <p className="font-normal">
+              A design wizard voyaging into the metaverse. I tell the story
+              through my design and illustrations. I spent most of my time
+              designing for brands and making design resources and tools.
+            </p>
+          </div>
+          {/* <div className="flex flex-col justify-center lg:flex-row md:pt-12 lg:space-x-20 items-center lg:justify-between">
             <div className="flex flex-col md:mt-12 lg:basis-[50%] space-y-12">
               <div className="flex mt-20 -mb-3 -space-x-0 items-end justify-center lg:justify-start">
                 <h2 className="font-space animate-text bg-gradient-to-r selection:text-gray-500 dark:selection:text-white/80 from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-3xl lg:text-4xl xl:text-5xl font-black">
@@ -41,7 +55,7 @@ export default function Home() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="w-60 h-60 mt-12 md:mt-20 select-none lg:mt-0 animate-heroBlob border-[1px] md:w-80 md:h-80 lg:w-[20rem] lg:h-[20rem] xl:w-[21rem] xl:h-[21rem]"
             />
-          </div>
+          </div> */}
           <div className="md:flex relative ms-auto justify-center items-center w-12 hidden md:my-16 lg:mt-0">
             <div
               onClick={() => {

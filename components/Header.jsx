@@ -1,43 +1,51 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { MdLightMode, MdDarkMode } from "react-icons/md";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { useTheme } from "next-themes";
+import pranjal_header_black from "../public/pranjal-header-black.svg";
+import pranjal_header_white from "../public/pranjal-header-white.svg";
+import Image from "next/image";
 
 const Header = () => {
-  let { systemTheme, theme, setTheme } = useState();
-  const [mounted, setMounted] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  let [open, setOpen] = useState(false);
+  let { systemTheme, theme, setTheme } = useTheme();
   const router = useRouter().asPath;
-  const touchRef = useRef();
+  const [mounted, setMounted] = useState(false);
   let Links = [
     { name: "work", link: "/work" },
     { name: "about", link: "/about" },
-    { name: "tech", link: "/link" },
+    { name: "tech", link: "/tech" },
   ];
+  const [isScrolled, setIsScrolled] = useState(false);
+  let [open, setOpen] = useState(false);
+  const touchRef = useRef();
   const clickHandler = (link) => {
-    if (router !== link) {
+    if (router != link) {
       setTimeout(() => {
         setOpen(false);
       }, 700);
     }
   };
-
   const useOutsideAlerter = (ref) => {
     useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
           setOpen(false);
         }
       }
+      // Bind the event listener
       document.addEventListener("mousedown", handleClickOutside);
-
       return () => {
+        // Unbind the event listener on clean up
         document.removeEventListener("mousedown", handleClickOutside);
       };
     }, [ref]);
   };
-  useOutsideAlerter();
+  useOutsideAlerter(touchRef);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,69 +57,69 @@ const Header = () => {
     };
     setMounted(true);
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
+  if (!mounted) return null;
   const currentTheme = theme === "system" ? systemTheme : theme;
-
   return (
     <nav
       ref={touchRef}
       className={`${
-        isScrolled && "bg-opacity-[0.7] shadow-md drop-shadow-lg"
-      } font-medium duration-500 bg-opacity-90 transition-all linear z-40 dark:text-white w-[75%] sm:w-[75%] md:w-[70%] lg-w-[55%] xl:w-[50%] max-w-6xl mx-auto bg-white dark:bg-[#353535] drop-shadow-xs backdrop-blur-sm top-4 stick rounded-2xl`}
+        isScrolled && "bg-opacity-[0.7] shadow-md drop-shadow-lg "
+      } font-medium duration-500 bg-opacity-90 transition-all linear z-40 dark:text-white w-[75%] sm:w-[75%] md:w-[70%] lg:w-[55%] xl:w-[50%] max-w-6xl mx-auto  bg-white dark:bg-[#353535] drop-shadow-xs backdrop-blur-sm top-4 sticky rounded-2xl `}
     >
       <div className="flex justify-between md:space-x-10 lg:space-x-12 xl:space-x-16 md:flex items-center place-items-center md:justify-center py-3 md:px-10 px-8">
-        <div className="select-none order-2 md:order-1 cursor-pointer flex items-center text-gray-800">
-          <Link href={"/"}>
-            {" "}
+        <div className=" select-none order-2 md:order-1 cursor-pointer flex items-center text-gray-800">
+          <Link href={"/"} className="">
+            {/* {" "}
             <h3 className="bg-gradient-to-tl from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-space text-xl font-bold">
-              pranjalshikhar{" "}
-            </h3>{" "}
+              yasier_{" "}
+            </h3>{" "} */}
+            {currentTheme === "dark" ? (
+              <Image src={pranjal_header_white} alt="header" width="100" />
+            ) : (
+              <Image src={pranjal_header_black} alt="header" width="100" />
+            )}
           </Link>
         </div>
-        {currentTheme === " dark" ? (
+        {currentTheme === "dark" ? (
           <button
             onClick={() => {
               setTheme("light");
             }}
-            className="w-max md:order-8 fill-purple-600"
+            className="w-max md:order-8 fill-purple-600 "
           >
-            <MdLightMode className="h-5 w-5 lg:w-6 lg:h-6 fill-white" />{" "}
+            <MdLightMode className="w-5 h-5 lg:w-6 lg:h-6 fill-white " />{" "}
           </button>
         ) : (
           <button
             onClick={() => {
               setTheme("dark");
             }}
-            className="w-max md:order-8 fill-purple-600"
+            className="w-max md:order-8 fill-purple-600 "
           >
-            <MdDarkMode className="h-5 w-5 lg:w-6 lg:h-6 fill-black" />{" "}
+            <MdDarkMode className="w-5 h-5 lg:w-6 lg:h-6 fill-black " />{" "}
           </button>
         )}
+
         <div
-          className="transition-all duration-500 ease-in order-3 text-lg flex flex-col space-y-[0.2rem] cursor-pointer items-center font-semibold md:hidden"
           onClick={() => setOpen(!open)}
+          className="transition-all duration-500 ease-in order-3 text-lg flex flex-col space-y-[0.2rem]  cursor-pointer items-center font-semibold md:hidden"
         >
           <div
-            className={`${
-              open && "rotate-45 translate-y-[5px]"
+            className={` ${
+              open && "rotate-45 translate-y-[5px] "
             } relative rounded-xl origin-center transition-all duration-500 ease-in w-4 h-[0.1125rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black`}
           ></div>
           <div
-            className={`${
+            className={` ${
               open && "opacity-0 translate-x-20"
-            } relative rounded-xl origin-center transition-all duration-500 ease-in w-4 h-[0.1125rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black`}
+            } relative rounded-xl origin-center transition-all duration-1000 ease-in-out w-4 h-[0.1rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black `}
           ></div>
           <div
-            className={`${
+            className={` ${
               open && "-rotate-45 -translate-y-[5px]"
             } relative rounded-xl origin-center transition-all duration-500 ease-in w-4 h-[0.1125rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black`}
           ></div>
@@ -127,12 +135,12 @@ const Header = () => {
               className="md:ml-8 text-base lg:text-lg md:my-0 my-7"
             >
               <Link
-                href={link.name}
+                href={link.link}
                 onClick={() => clickHandler(`${link.name}`)}
                 className={`${
                   router === link.link
-                    ? "text-purple-400 font-semibold"
-                    : "text-gray-700 dark:text-white"
+                    ? " text-purple-400 font-semibold "
+                    : " text-gray-700 dark:text-white "
                 } hover:text-purple-500 dark:hover:text-purple-500 duration-500`}
               >
                 {link.name}
@@ -141,28 +149,15 @@ const Header = () => {
           ))}
           <li
             key={4}
-            className="md:ml-8 text-base xl:text-[1.1rem] font-regular md:my-0 my-7"
+            className="md:ml-8  text-base xl:text-[1.1rem] font-regular md:my-0 my-7"
           >
             <a
-              href="#"
+              href="/resume.pdf"
               target="blank"
               rel="noreferrer"
               className="text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-500 duration-500"
             >
-              resume
-            </a>
-          </li>
-          <li
-            key={5}
-            className="md:ml-8 text-base xl:text-[1.1rem] font-regular md:my-0 my-7"
-          >
-            <a
-              href="#"
-              target="blank"
-              rel="noreferrer"
-              className="text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-500 duration-500"
-            >
-              behance
+              Resume
             </a>
           </li>
         </ul>

@@ -4,13 +4,16 @@ import Image from "next/image";
 import aboutImage from "../public/image.jpg";
 import { useTheme } from "next-themes";
 import CategoryCard from "@/components/CategoryCard";
+import love_black from "../public/love-black.svg";
+import love_white from "../public/love-white.svg";
 
 export default function About() {
-  const { theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
   return (
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto">
       <Head>
-        <title> About me ☁️ Yasier Ansari </title>
+        <title> About Me </title>
       </Head>
       <main className="  max-w-screen ">
         <div className=" mx-auto pt-16 -pb-10 max-w-7xl">
@@ -27,7 +30,7 @@ export default function About() {
                 height={600}
                 width={600}
                 className="rounded-2xl select-none drop-shadow-md shadow-purple-200 dark:shadow-orange-100/60 dark:drop-shadow-sm shadow-2xl h-28 w-28 md:h-32 md:w-32 lg:h-40 lg:w-40 border-white border-2"
-                alt="yasier ansari"
+                alt="pranjal shikhar"
                 priority
               />
             </div>
@@ -84,7 +87,8 @@ export default function About() {
                 {" "}
                 Pranjal Shikhar Sinha{" "}
               </a>{" "}
-              or you can DM me on insta{" "}
+              or you can DM me on{" "}
+              <span className="text-orange-500 font-bold">Instagram</span>{" "}
               <a
                 href="https://instagram.com/pranjal.fig"
                 target="blank"
@@ -96,17 +100,15 @@ export default function About() {
               </a>{" "}
             </p>
           </div>
-          <div className="flex mx-auto justify-center mt-16 select-none ">
-            ✨
-            <span className="font-black font-app text-lg md:text-3xl align-text-bottom tracking-wider mx-3 md:mx-6">
-              thanks for visiting
-            </span>
-            ✨
-          </div>
-          <div className="flex mx-auto justify-center mt-16 select-none ">
-            <span className="font-black font-app text-lg md:text-3xl align-text-bottom tracking-wider mx-3 md:mx-6">
+          <div className="flex mx-auto justify-center mt-16 select-none">
+            <span className="font-black font-app text-2xl md:text-3xl align-text-bottom tracking-wider mx-3 md:mx-6">
               dattebayo
             </span>
+            {currentTheme === "dark" ? (
+              <Image src={love_white} alt="love" width="30" className="-mt-4" />
+            ) : (
+              <Image src={love_black} alt="love" width="30" className="-mt-4" />
+            )}
           </div>
         </div>
       </main>
