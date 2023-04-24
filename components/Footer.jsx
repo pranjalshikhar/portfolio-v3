@@ -24,7 +24,7 @@ const Footer = () => {
         "https://api.github.com/repos/pranjalshikhar/portfolio-v3"
       ).then((res) => res.json());
       setMetaData({
-        star: data.stargazzers_count,
+        star: data.stargazers_count,
         forks: data.forks_count,
       });
     };

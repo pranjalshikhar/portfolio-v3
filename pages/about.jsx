@@ -1,11 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
-// import CategoryCard from "../components/About-cat";
 import aboutImage from "../public/image.jpg";
 import { useTheme } from "next-themes";
 import CategoryCard from "@/components/CategoryCard";
 import love_black from "../public/love-black.svg";
 import love_white from "../public/love-white.svg";
+import Rocket from "../public/Rocket.svg";
+import Polish from "../public/Polish.svg";
+import Flash from "../public/Flash.svg";
+import Sparkles from "../public/Sparkles.svg";
+import Developer from "../public/Developer.svg";
+import Weeb from "../public/Weeb.svg";
+import Whale from "../public/Whale.svg";
 
 export default function About() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -13,7 +19,8 @@ export default function About() {
   return (
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
       <Head>
-        <title> About Me </title>
+        <title>about ✦ pranjal</title>
+        <link rel="icon" href="/Avatar-white.svg" />
       </Head>
       <main className="  max-w-screen ">
         <div className=" mx-auto pt-16 -pb-10 max-w-7xl">
@@ -36,26 +43,77 @@ export default function About() {
             </div>
             <div className="text-center mx-auto mt-8 z-20">
               <h3 className="mx-auto  font-bold text-lg lg:text-xl xl:text-2xl">
-                Pranjal Shikhar Sinha 🍜
+                Pranjal Shikhar Sinha{" "}
+                <span class="inline-flex items-baseline">
+                  <Image
+                    src={Whale}
+                    alt="rocket"
+                    class="self-center w-8 h-8 mx-1"
+                  />
+                </span>{" "}
               </h3>
               <p className="text-gray-400 font-deca font-normal text-xs sm:text-sm md:text-md lg:text-lg ">
-                Developer 🧑🏽‍💻 // Designer 🖌️// Weeb ⛩️
+                Developer{" "}
+                <span class="inline-flex items-baseline">
+                  <Image
+                    src={Developer}
+                    alt="rocket"
+                    class="self-center w-6 h-6 mx-1"
+                  />
+                </span>{" "}
+                &#47;&#47; Designer{" "}
+                <span class="inline-flex items-baseline">
+                  <Image
+                    src={Polish}
+                    alt="rocket"
+                    class="self-center w-6 h-6 mx-1"
+                  />
+                </span>{" "}
+                &#47;&#47; Weeb{" "}
+                <span class="inline-flex items-baseline">
+                  <Image
+                    src={Weeb}
+                    alt="rocket"
+                    class="self-center w-6 h-6 mx-1"
+                  />
+                </span>{" "}
               </p>
             </div>
           </div>
           <CategoryCard />
           <div className=" text-[0.92rem] md:text-base md:text-md lg:text-lg xl:text-xl mx-auto font-light dark:text-white text-gray-900 ">
-            <p className="mt-6 mb-12">
+            <p className="mt-6 mb-12 leading-10 font-normal">
               A Front-end Engineer who develops modern, reactive, and
-              user-friendly web applications using the latest technologies. 🚀 I
-              Believe a perfect blend of UI architecture is one, where the goals
-              and needs are accounted for in an elegant, efficient, and robust
-              design of the UI. ✨ experience in ReactJS, React Native, NextJS,
-              and state management like Redux with proficiency in web
-              technologies like HTML5, CSS3, and JavaScript, building
-              large-scale web applications, cross-browser platforms, and design
-              constraints on the web, and building responsive user interfaces.
-              ⚡
+              user-friendly web applications using the latest technologies.{" "}
+              <span class="inline-flex items-baseline">
+                <Image
+                  src={Rocket}
+                  alt="rocket"
+                  class="self-center w-8 h-8 mx-1"
+                />
+              </span>{" "}
+              I Believe a perfect blend of UI architecture is one, where the
+              goals and needs are accounted for in an elegant, efficient, and
+              robust design of the UI{" "}
+              <span class="inline-flex items-baseline">
+                <Image
+                  src={Sparkles}
+                  alt="rocket"
+                  class="self-center w-8 h-8 mx-1"
+                />
+              </span>{" "}
+              Experience in ReactJS, React Native, NextJS, and state management
+              like Redux with proficiency in web technologies like HTML5, CSS3,
+              and JavaScript, building large-scale web applications,
+              cross-browser platforms, and design constraints on the web, and
+              building responsive user interfaces.{" "}
+              <span class="inline-flex items-baseline">
+                <Image
+                  src={Flash}
+                  alt="rocket"
+                  class="self-center w-8 h-8 mx-1"
+                />
+              </span>{" "}
             </p>
 
             <p className="text-gray-400 select-none font-semibold mb-1 dark:text-white/30 ">
@@ -67,7 +125,7 @@ export default function About() {
               available for connection on my social media platforms. <br />
               You can contact me on the{" "}
               <span className="text-red-700 font-bold">GMail</span>{" "}
-              <span
+              <a
                 onClick={() =>
                   navigator.clipboard.writeText("shikhar.pranjal3@gmail.com")
                 }
@@ -76,7 +134,7 @@ export default function About() {
               >
                 {" "}
                 shikhar.pranjal3@gmail.com
-              </span>{" "}
+              </a>{" "}
               or <span className="text-blue-700 font-bold">LinkedIn</span>{" "}
               <a
                 href="http://linkedin.com/in/pranjalshikhar"

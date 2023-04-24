@@ -7,6 +7,14 @@ import frontend_development from "../public/frontend-development.svg";
 import design from "../public/design.svg";
 
 const Experience = () => {
+  if (typeof window !== "undefined") {
+    // Client-side-only code
+    if (window.innerWidth < 1024) {
+      console.log("hello");
+    } else {
+      console.log("niklo");
+    }
+  }
   return (
     <div className=" mt-32 lg:mt-8 flex flex-col justify-start space-y-12 mx-auto items-center md:mt-20 lg:min-h-screen">
       <div className="bg-purple-300 w-36 h-36 rounded-lg p-4 select-none ">
@@ -51,6 +59,7 @@ const Experience = () => {
       </div>
       <div className="flex flex-col relative space-y-16 md:space-y-10 lg:space-y-8 items-center">
         <div className="absolute left-[0%] md:left-[10%] lg:left-[50%] w-[3px] h-full top-8 md:top-4 bg-gradient-to-b from-teal-400 via-purple-400 to-orange-400 border-[#ffffff80] border rounded"></div>
+
         <div className="self-start drop-shadow-2xl  flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[45%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none md:rounded-tr-none lg:rounded-tl-[2rem] hover:bg-gradient-to-tr  dark:hover:from-[#023e8a] hover:from-[#ffeff7] dark:hover:to-[#0096c7] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:-translate-x-2  bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:from-[#023e8a] dark:to-[#0096c7] lg:bg-none ">
           <div className="mx-auto text-center font-bold font-deca text-2xl text-indigo-500 dark:text-[#4cc9f0]">
             Web Dev
