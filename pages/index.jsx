@@ -8,7 +8,7 @@ import Experience from "@/components/Experience";
 import Head from "next/head";
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (

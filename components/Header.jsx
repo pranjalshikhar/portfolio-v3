@@ -9,7 +9,7 @@ import pranjal_header_white from "../public/pranjal-header-white.svg";
 import Image from "next/image";
 
 const Header = () => {
-  let { systemTheme, theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
   const router = useRouter().asPath;
   const [mounted, setMounted] = useState(false);
   let Links = [
