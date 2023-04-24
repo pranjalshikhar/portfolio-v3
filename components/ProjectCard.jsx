@@ -8,10 +8,6 @@ import redeye from "../public/red-eye.svg";
 import Link from "next/link";
 
 const ProjectCard = () => {
-  if (typeof window === "object") {
-    //This code is executed in the browser
-    console.log(window.innerWidth);
-  }
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <div className="rounded-lg w-fit mb-12 flex flex-col items-center">

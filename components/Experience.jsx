@@ -8,14 +8,6 @@ import Textures from "../public/Textures.svg";
 import PIN from "../public/PIN.svg";
 
 const Experience = () => {
-  if (typeof window !== "undefined") {
-    // Client-side-only code
-    if (window.innerWidth < 1024) {
-      console.log("hello");
-    } else {
-      console.log("niklo");
-    }
-  }
   return (
     <div className=" mt-32 lg:mt-8 flex flex-col justify-start space-y-12 mx-auto items-center md:mt-20 lg:min-h-screen">
       <div className="bg-purple-300 w-36 h-36 rounded-lg p-4 select-none ">
