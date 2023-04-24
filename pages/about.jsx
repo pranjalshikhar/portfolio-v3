@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import aboutImage from "../public/image.jpg";
+import aboutImage from "../public/image1.jpg";
 import { useTheme } from "next-themes";
 import CategoryCard from "@/components/CategoryCard";
 import love_black from "../public/love-black.svg";
