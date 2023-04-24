@@ -2,9 +2,10 @@ import Image from "next/image";
 import { FiFileText } from "react-icons/fi";
 import { BsArrowUpRight } from "react-icons/bs";
 import Link from "next/link";
-import { CldImage } from "next-cloudinary";
 import frontend_development from "../public/frontend-development.svg";
 import design from "../public/design.svg";
+import Textures from "../public/Textures.svg";
+import PIN from "../public/PIN.svg";
 
 const Experience = () => {
   if (typeof window !== "undefined") {
@@ -58,9 +59,9 @@ const Experience = () => {
         </div>
       </div>
       <div className="flex flex-col relative space-y-16 md:space-y-10 lg:space-y-8 items-center">
-        <div className="absolute left-[0%] md:left-[10%] lg:left-[50%] w-[3px] h-full top-8 md:top-4 bg-gradient-to-b from-teal-400 via-purple-400 to-orange-400 border-[#ffffff80] border rounded"></div>
+        <div className="absolute left-[0%] md:left-[10%] lg:left-[50%] w-[3px] h-full top-8 md:top-4 bg-gradient-to-b from-teal-400 via-purple-400 to-orange-400 border-[#ffffff80] border rounded lg:hidden"></div>
 
-        <div className="self-start drop-shadow-2xl  flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[45%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none md:rounded-tr-none lg:rounded-tl-[2rem] hover:bg-gradient-to-tr  dark:hover:from-[#023e8a] hover:from-[#ffeff7] dark:hover:to-[#0096c7] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:-translate-x-2  bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:from-[#023e8a] dark:to-[#0096c7] lg:bg-none ">
+        <div className="drop-shadow-2xl flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[80%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none md:rounded-tr-none lg:rounded-tl-[2rem] hover:bg-gradient-to-tr  dark:hover:from-[#023e8a] hover:from-[#ffeff7] dark:hover:to-[#0096c7] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:-translate-x-2  bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:bg-gradient-to-bl dark:from-indigo-900 dark:via-indigo-400 dark:to-indigo-900 lg:bg-none">
           <div className="mx-auto text-center font-bold font-deca text-2xl text-indigo-500 dark:text-[#4cc9f0]">
             Web Dev
           </div>
@@ -69,7 +70,7 @@ const Experience = () => {
             skills mainly in ReactJs centered tools. I have added a splash of
             personality to every project I work on.
           </div>
-          <div className="flex space-x-4 ml-2 justify-start text-[0.9rem] font-semibold dark:text-black ">
+          <div className="flex space-x-4 ml-2 justify-center text-[0.9rem] dark:text-black">
             <span className="bg-gradient-to-b dark:from-indigo-500 dark:to-blue-400 from-indigo-200 to-blue-200 rounded-md text-center px-2 py-1">
               NextJs
             </span>
@@ -80,17 +81,18 @@ const Experience = () => {
               Typescript
             </span>
           </div>
-          <div className="relative w-full h-52 rounded ">
+          <div className="relative w-full h-80 rounded">
             <Image
               fill
-              src={frontend_development}
+              priority
+              src={Textures}
               alt="Web Image"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw,33vw"
               className="select-none object-cover rounded-md border-2 border-white shadow-md drop-shadow-md"
             />
           </div>
         </div>
-        <div className="self-start lg:self-end drop-shadow-xl flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[45%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none hover:bg-gradient-to-tr  dark:hover:from-[#e36414] hover:from-[#ffeff7] dark:hover:to-[#fb8b24] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:translate-x-2 bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:from-[#e36414] dark:to-[#fb8b24] lg:bg-none ">
+        <div className="drop-shadow-xl flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[80%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none hover:bg-gradient-to-tr  dark:hover:from-[#e36414] hover:from-[#ffeff7] dark:hover:to-[#fb8b24] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:translate-x-2 bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] dark:from-yellow-500 dark:via-red-500 dark:to-fuchsia-500 lg:bg-none">
           <div className="mx-auto text-center font-deca font-bold text-2xl dark:text-[#9e2a2b] text-orange-500">
             Design
           </div>
@@ -99,7 +101,7 @@ const Experience = () => {
             a work of art, inviting the user on a journey through its purposeful
             and visually pleasing elements.
           </div>
-          <div className="flex flex-row ml-2 space-x-4 justify-start  text-[0.9rem] font-semibold dark:text-black ">
+          <div className="flex flex-row ml-2 space-x-4 justify-center text-[0.9rem] dark:text-black ">
             <span className="bg-gradient-to-b from-amber-100 to-orange-100 dark:from-amber-300 dark:to-orange-300 rounded-md text-center px-2 py-1">
               Figma
             </span>
@@ -110,10 +112,11 @@ const Experience = () => {
               Webflow
             </span>
           </div>
-          <div className="relative w-full h-52 rounded-[1.4rem] ">
+          <div className="relative w-full h-80 rounded-[1.4rem] ">
             <Image
               fill
-              src={design}
+              priority
+              src={PIN}
               alt="Design Image"
               sizes="(max-width: 768px) 100vw,
           (max-width: 1200px) 50vw,
