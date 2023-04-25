@@ -12,10 +12,20 @@ import Sparkles from "../public/Sparkles.svg";
 import Developer from "../public/Developer.svg";
 import Weeb from "../public/Weeb.svg";
 import Whale from "../public/Whale.svg";
+import { useEffect } from "react";
 
 export default function About() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
+
+  useEffect(() => {
+    console.clear();
+    console.log.apply(console, [
+      "%c A brief intro about my self. Well a little brag about myself. 🐼\n",
+      "color: #fff; background: #8000ff; padding:5px 0;",
+    ]);
+  }, []);
+
   return (
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
       <Head>
@@ -44,37 +54,37 @@ export default function About() {
             <div className="text-center mx-auto mt-8 z-20">
               <h3 className="mx-auto  font-bold text-lg lg:text-xl xl:text-2xl">
                 Pranjal Shikhar Sinha{" "}
-                <span class="inline-flex items-baseline">
+                <span className="inline-flex items-baseline">
                   <Image
                     src={Whale}
                     alt="rocket"
-                    class="self-center w-8 h-8 mx-1"
+                    className="self-center w-8 h-8 mx-1"
                   />
                 </span>{" "}
               </h3>
               <p className="text-gray-400 font-deca font-normal text-xs sm:text-sm md:text-md lg:text-lg ">
                 Developer{" "}
-                <span class="inline-flex items-baseline">
+                <span className="inline-flex items-baseline">
                   <Image
                     src={Developer}
                     alt="rocket"
-                    class="self-center w-6 h-6 mx-1"
+                    className="self-center w-6 h-6 mx-1"
                   />
                 </span>{" "}
                 &#47;&#47; Designer{" "}
-                <span class="inline-flex items-baseline">
+                <span className="inline-flex items-baseline">
                   <Image
                     src={Polish}
                     alt="rocket"
-                    class="self-center w-6 h-6 mx-1"
+                    className="self-center w-6 h-6 mx-1"
                   />
                 </span>{" "}
                 &#47;&#47; Weeb{" "}
-                <span class="inline-flex items-baseline">
+                <span className="inline-flex items-baseline">
                   <Image
                     src={Weeb}
                     alt="rocket"
-                    class="self-center w-6 h-6 mx-1"
+                    className="self-center w-6 h-6 mx-1"
                   />
                 </span>{" "}
               </p>
@@ -85,21 +95,21 @@ export default function About() {
             <p className="mt-6 mb-12 leading-10 font-normal">
               A Front-end Engineer who develops modern, reactive, and
               user-friendly web applications using the latest technologies.{" "}
-              <span class="inline-flex items-baseline">
+              <span className="inline-flex items-baseline">
                 <Image
                   src={Rocket}
                   alt="rocket"
-                  class="self-center w-8 h-8 mx-1"
+                  className="self-center w-8 h-8 mx-1"
                 />
               </span>{" "}
               I Believe a perfect blend of UI architecture is one, where the
               goals and needs are accounted for in an elegant, efficient, and
               robust design of the UI{" "}
-              <span class="inline-flex items-baseline">
+              <span className="inline-flex items-baseline">
                 <Image
                   src={Sparkles}
                   alt="rocket"
-                  class="self-center w-8 h-8 mx-1"
+                  className="self-center w-8 h-8 mx-1"
                 />
               </span>{" "}
               Experience in ReactJS, React Native, NextJS, and state management
@@ -107,11 +117,11 @@ export default function About() {
               and JavaScript, building large-scale web applications,
               cross-browser platforms, and design constraints on the web, and
               building responsive user interfaces.{" "}
-              <span class="inline-flex items-baseline">
+              <span className="inline-flex items-baseline">
                 <Image
                   src={Flash}
                   alt="rocket"
-                  class="self-center w-8 h-8 mx-1"
+                  className="self-center w-8 h-8 mx-1"
                 />
               </span>{" "}
             </p>

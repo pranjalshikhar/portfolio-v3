@@ -6,10 +6,26 @@ import Avatar_White from "../public/Avatar-white.svg";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Head from "next/head";
+import { useEffect } from "react";
 
 export default function Home() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
+
+  useEffect(() => {
+    console.clear();
+    console.log.apply(console, [
+      "%c Designed and Developed by Pranjal Shikhar %c %c🚀 %c\n",
+      "color: #fff; background: #8000ff; padding:5px 0;",
+      "color: #fff; background: #242424; padding:5px 0 5px 5px;",
+      "background: #242424; padding:5px 0",
+      "background: #242424; padding:5px 5px 5px 0",
+    ]);
+    console.log.apply(console, [
+      "%c Thanks for stopping by, I’m currently looking to a new team of creative designers and developers.\n",
+      "color: #fff; background: #8000ff; padding:5px 0;",
+    ]);
+  }, []);
 
   return (
     <>

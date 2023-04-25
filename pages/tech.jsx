@@ -2,7 +2,7 @@
 import TechCard from "@/components/TechCard";
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   HiOutlineArrowLongLeft,
   HiOutlineArrowLongRight,
@@ -137,6 +137,15 @@ const tech = () => {
       setIdNumber(idNumber - 1);
     }
   };
+
+  useEffect(() => {
+    console.clear();
+    console.log.apply(console, [
+      "%c Tech Stack I loved to work on. 🍾\n",
+      "color: #fff; background: #8000ff; padding:5px 0;",
+    ]);
+  }, []);
+
   return (
     <div className="min-h-[75vh] md:min-h-[73vh] px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 xl:px-80 mx-auto">
       <Head>

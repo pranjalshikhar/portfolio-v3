@@ -1,7 +1,16 @@
 import ProjectCard from "@/components/ProjectCard";
 import Head from "next/head";
+import { useEffect } from "react";
 
 export default function Wok() {
+  useEffect(() => {
+    console.clear();
+    console.log.apply(console, [
+      "%c These are some of my notable projects I worked on. 🍾\n",
+      "color: #fff; background: #8000ff; padding:5px 0;",
+    ]);
+  }, []);
+
   return (
     <div className="px-10 sm:px-20 md:px-32 md:-mb-52 lg:mb-0 lg:px-60 mx-auto max-w-[75rem]">
       <Head>
