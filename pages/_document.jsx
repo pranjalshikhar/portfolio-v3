@@ -10,55 +10,64 @@ export default function Document() {
       <Head>
         <meta
           property="description"
-          content="Google DSC web Co-lead | Web Dev | DevOps | AI-ML | Figma Design | Student with a love for all things colorful & creative ..."
+          content="Frontend Developer | Frontend Engineer | Front-end Engineer | Front-end Developer | Web Dev | UI-UX | UI/UX | Figma Design"
         />
         <meta
           name="keywords"
-          content="YASIER ANSARI, YASIER NORU, MH SABOO SIDDIK, GOOGLE DSC WEB, GDSC WEB LEAD, ANSARI MD YASIER, YASIER.IN , NEXTJS WEB DEVELOPER, REACTJS WEB DEV, TAILWINDCSS WEB DEVELOPER, INDIAN WEB DEVELOPER, INDIAN GDSC LEAD, INDIAN GOOGLE DEVELOPER STUDENT CLUB LEAD"
+          content="PRANJAL SHIKHAR, PRANJAL SHIKHAR SINHA, PRANJAL, REACT, REACTJS, NEXT, NEXTJS, NEXTJS WEB DEVELOPER, REACTJS WEB DEV, TAILWINDCSS WEB DEVELOPER, INDIAN WEB DEVELOPER, CREATIVE PORTFOLIO, CREATIVE NEXTJS PORTFOLIO, CREATIVE REACTJS PORTFOLIO"
         />
 
         {/* facebook card */}
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_EN" />
-        <meta property="og:title" content="Yasier Ansari | Web Dev" />
-        <meta property="og:site_name" content="yasier.in" />
-        <meta property="og:url" content="https://www.yasier.in" />
+        <meta property="og:title" content="Pranjal Shikhar" />
+        <meta
+          property="og:site_name"
+          content="https://pranjalshikhar.vercel.app"
+        />
+        <meta property="og:url" content="https://pranjalshikhar.vercel.app/" />
         <meta
           property="og:description"
-          content="Google DSC web Co-lead | Web Dev | DevOps | AI-ML | Figma Design | Student with a love for all things colorful & creative ..."
+          content="Frontend Developer | Frontend Engineer | Front-end Engineer | Front-end Developer | Web Dev | UI-UX | UI/UX | Figma Design"
         />
         <meta
           property="og:image"
           itemProp="image"
-          content="https://res.cloudinary.com/yasier/image/upload/c_fill,e_auto_saturation,g_center,h_945,q_50,w_1800/v1676054986/seo/card_fj8hfc.jpg"
+          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682421989/pranjal%20shikhar.png"
         />
         <meta property="og:image:height" content="1200" />
         <meta property="og:image:width" content="800" />
 
         {/* twitter card */}
 
-        <meta property="twitter:domain" content="https://www.yasier.in" />
+        <meta
+          property="twitter:domain"
+          content="https://pranjalshikhar.vercel.app/"
+        />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="yasier.in" />
-        <meta property="twitter:creator" content="@Yasier_noru" />
-        <meta property="twitter:title" content="Yasier Ansari | Noru  " />
+        <meta
+          name="twitter:site"
+          content="https://pranjalshikhar.vercel.app/"
+        />
+        <meta property="twitter:creator" content="@pranjalshikhar" />
+        <meta property="twitter:title" content="PRANJAL ⚡" />
         <meta
           property="twitter:description"
-          content="Google DSC web Co-lead | Web Dev | DevOps | AI-ML | Figma Design | Student with a love for all things colorful & creative ..."
+          content="Frontend Developer | Frontend Engineer | Front-end Engineer | Front-end Developer | Web Dev | UI-UX | UI/UX | Figma Design"
         />
         <meta
           property="twitter:image"
-          content="https://res.cloudinary.com/yasier/image/upload/c_fill,e_auto_saturation,g_center,h_784,q_50,w_1500/v1676054986/seo/card_fj8hfc.jpg"
+          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682421989/pranjal%20shikhar.png"
         />
 
         {/* canonical links */}
 
-        <link rel="canonical" href="https://www.yasier.in/" />
+        <link rel="canonical" href="https://pranjalshikhar.vercel.app/" />
         <link
           rel="search"
           href="/opensearch.xml"
           type="application/opensearchdescription+xml"
-          title="Yasier Ansari"
+          title="Pranjal Shikhar"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

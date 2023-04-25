@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.yasier.in
+Host: https://pranjalshikhar.vercel.app/
 
 # Sitemaps
-Sitemap: https://www.yasier.in/sitemap.xml
+Sitemap: https://pranjalshikhar.vercel.app/sitemap.xml
