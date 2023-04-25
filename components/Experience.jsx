@@ -2,10 +2,8 @@ import Image from "next/image";
 import { FiFileText } from "react-icons/fi";
 import { BsArrowUpRight } from "react-icons/bs";
 import Link from "next/link";
-import frontend_development from "../public/frontend-development.svg";
-import design from "../public/design.svg";
-import Textures from "../public/Textures.svg";
-import PIN from "../public/PIN.svg";
+import Textures from "../public/Textures.jpg";
+import PIN from "../public/PIN.jpg";
 
 const Experience = () => {
   return (
@@ -53,7 +51,7 @@ const Experience = () => {
       <div className="flex flex-col relative space-y-16 md:space-y-10 lg:space-y-8 items-center">
         <div className="absolute left-[0%] md:left-[10%] lg:left-[50%] w-[3px] h-full top-8 md:top-4 bg-gradient-to-b from-teal-400 via-purple-400 to-orange-400 border-[#ffffff80] border rounded lg:hidden"></div>
 
-        <div className="drop-shadow-2xl flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[80%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none md:rounded-tr-none lg:rounded-tl-[2rem] hover:bg-gradient-to-tr hover:from-[#ffeff7] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:-translate-x-2  bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:hover:bg-gradient-to-tr dark:hover:from-gray-900 dark:hover:to-gray-600 lg:bg-none">
+        <div className="drop-shadow-2xl flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[80%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none md:rounded-tr-none lg:rounded-tl-[2rem] hover:bg-gradient-to-tr hover:from-[#ffeff7] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:-translate-x-2  bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:from-gray-900 dark:to-gray-600 dark:hover:bg-gradient-to-tr dark:hover:from-gray-900 dark:hover:to-gray-600 lg:bg-none">
           <div className="mx-auto text-center font-bold font-deca text-2xl text-indigo-500 dark:text-[#4cc9f0]">
             Web Dev
           </div>
@@ -84,8 +82,8 @@ const Experience = () => {
             />
           </div>
         </div>
-        <div className="drop-shadow-xl flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[80%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none hover:bg-gradient-to-tr hover:from-[#ffeff7] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:translate-x-2 bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:hover:bg-gradient-to-tr dark:hover:from-gray-900 dark:hover:to-gray-600 lg:bg-none">
-          <div className="mx-auto text-center font-deca font-bold text-2xl dark:text-[#9e2a2b] text-orange-500">
+        <div className="drop-shadow-xl flex flex-col space-y-4 mx-6 md:mx-20 lg:mx-0 md:w-[70%] lg:w-[80%] max-w-2xl rounded-[1.4rem] p-4 rounded-tl-none hover:bg-gradient-to-tr hover:from-[#ffeff7] hover:to-[#F0F6FE] transition ease-in-out duration-500 hover:shadow-xl transform hover:translate-x-2 bg-gradient-to-tr from-[#ffeff7] to-[#F0F6FE] dark:from-gray-900 dark:to-gray-600 dark:hover:bg-gradient-to-tr dark:hover:from-gray-900 dark:hover:to-gray-600 lg:bg-none">
+          <div className="mx-auto text-center font-deca font-bold text-2xl dark:text-[#d58357] text-orange-500">
             Design
           </div>
           <div className="font-normal sm:text-[0.95rem] md:text-base text-center">
@@ -120,7 +118,7 @@ const Experience = () => {
       </div>
       <div className="w-[80%] max-w-2xl mx-auto">
         <div className="text-center font-normal mb-6 tracking-normal text-sm leading-5 sm:text-base lg:text-lg ">
-          that was a short information about the domain that I have previously
+          That was a short information about the domain that I have previously
           worked on. while you&apos;re at it, have a look at few chosen works
           that i have created using above domain. And if you want to know more,
           you can download my resume

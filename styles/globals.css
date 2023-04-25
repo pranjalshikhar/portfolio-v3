@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 *::selection {
   @apply bg-emerald-100 dark:bg-purple-400/70;
 }

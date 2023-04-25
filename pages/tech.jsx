@@ -196,7 +196,7 @@ const tech = () => {
           </button>
         </div>
         <div className="mt-12 pb-12 grid grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8 w-[80%] sm:w-[75%] md:w-[70%] mx-auto items-center justify-items-center justify-center place-content-center ">
-          {data.map(function (obj, i) {
+          {data.map((obj, i) => {
             return (
               <TechCard
                 id={obj.id}
