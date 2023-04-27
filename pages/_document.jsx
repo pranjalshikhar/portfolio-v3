@@ -63,7 +63,7 @@ export default function Document() {
           rel="search"
           href="/opensearch.xml"
           type="application/opensearchdescription+xml"
-          title="Pranjal Shikhar"
+          title="pranjal ✦"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
