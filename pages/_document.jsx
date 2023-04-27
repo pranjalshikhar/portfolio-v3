@@ -41,10 +41,7 @@ export default function Document() {
           content="https://pranjalshikhar.vercel.app/"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:site"
-          content="https://pranjalshikhar.vercel.app/"
-        />
+        <meta name="twitter:site" content="pranjalshikhar.vercel.app/" />
         <meta property="twitter:creator" content="@pranjalshikhar" />
         <meta property="twitter:title" content="pranjal ✦" />
         <meta
@@ -94,6 +91,29 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
+        />
+
+        {/* Open Graph */}
+        <meta
+          property="og:url"
+          content="https://pranjalshikhar.vercel.app/"
+          key="ogurl"
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682600618/pranjalshikhar_i8znzx.jpg"
+          key="ogimage"
+        />
+        <meta
+          property="og:site_name"
+          content="https://pranjalshikhar.vercel.app/"
+          key="ogsitename"
+        />
+        <meta property="og:title" content="pranjal ✦" key="ogtitle" />
+        <meta
+          property="og:description"
+          content="Developer // Designer // Weeb"
+          key="ogdesc"
         />
       </Head>
       <body className="back font-out mx-auto bg-[#fffdfd] dark:bg-[#242424] overflow-x-hidden lg:transform-gpu ">
