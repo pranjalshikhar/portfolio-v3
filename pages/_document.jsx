@@ -101,7 +101,9 @@ export default function Document() {
         />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682600618/pranjalshikhar_i8znzx.jpg"
+          content={
+            "https://res.cloudinary.com/dhtviyhse/image/upload/v1682600618/pranjalshikhar_i8znzx.jpg"
+          }
           key="ogimage"
           itemprop="image"
         />
