@@ -103,6 +103,7 @@ export default function Document() {
           property="og:image"
           content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682600618/pranjalshikhar_i8znzx.jpg"
           key="ogimage"
+          itemprop="image"
         />
         <meta
           property="og:site_name"
