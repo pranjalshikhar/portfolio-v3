@@ -8,10 +8,7 @@ export default function Document() {
       lang="en"
     >
       <Head>
-        <meta
-          property="description"
-          content="Frontend Developer | Frontend Engineer | Front-end Engineer | Front-end Developer | Web Dev | UI-UX | UI/UX | Figma Design"
-        />
+        <meta property="description" content="Developer // Designer // Weeb" />
         <meta
           name="keywords"
           content="PRANJAL SHIKHAR, PRANJAL SHIKHAR SINHA, PRANJAL, REACT, REACTJS, NEXT, NEXTJS, NEXTJS WEB DEVELOPER, REACTJS WEB DEV, TAILWINDCSS WEB DEVELOPER, INDIAN WEB DEVELOPER, CREATIVE PORTFOLIO, CREATIVE NEXTJS PORTFOLIO, CREATIVE REACTJS PORTFOLIO"
@@ -20,7 +17,7 @@ export default function Document() {
         {/* facebook card */}
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_EN" />
-        <meta property="og:title" content="Pranjal Shikhar" />
+        <meta property="og:title" content="pranjal ✦" />
         <meta
           property="og:site_name"
           content="https://pranjalshikhar.vercel.app"
@@ -28,18 +25,17 @@ export default function Document() {
         <meta property="og:url" content="https://pranjalshikhar.vercel.app/" />
         <meta
           property="og:description"
-          content="Frontend Developer | Frontend Engineer | Front-end Engineer | Front-end Developer | Web Dev | UI-UX | UI/UX | Figma Design"
+          content="Developer // Designer // Weeb"
         />
         <meta
           property="og:image"
           itemProp="image"
-          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682421989/pranjal%20shikhar.png"
+          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682600618/pranjalshikhar_i8znzx.jpg"
         />
         <meta property="og:image:height" content="1200" />
         <meta property="og:image:width" content="800" />
 
         {/* twitter card */}
-
         <meta
           property="twitter:domain"
           content="https://pranjalshikhar.vercel.app/"
@@ -50,14 +46,14 @@ export default function Document() {
           content="https://pranjalshikhar.vercel.app/"
         />
         <meta property="twitter:creator" content="@pranjalshikhar" />
-        <meta property="twitter:title" content="PRANJAL ⚡" />
+        <meta property="twitter:title" content="pranjal ✦" />
         <meta
           property="twitter:description"
-          content="Frontend Developer | Frontend Engineer | Front-end Engineer | Front-end Developer | Web Dev | UI-UX | UI/UX | Figma Design"
+          content="Developer // Designer // Weeb"
         />
         <meta
           property="twitter:image"
-          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682421989/pranjal%20shikhar.png"
+          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682600618/pranjalshikhar_i8znzx.jpg"
         />
 
         {/* canonical links */}

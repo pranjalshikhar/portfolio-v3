@@ -73,19 +73,6 @@ export default function Home() {
               for in an elegant, efficient, and robust design of the UI.
             </p>
           </div>
-          {/* <div className="md:flex relative ms-auto justify-center items-center w-12 hidden md:my-16 lg:mt-0">
-            <div
-              onClick={() => {
-                window.scrollTo(0, 520);
-              }}
-            >
-              <div id="wrapper-inner">
-                <div id="scroll-down">
-                  <span className="arrow-down"></span>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
         <div className="mt-28 mx-auto">
           <Experience />
