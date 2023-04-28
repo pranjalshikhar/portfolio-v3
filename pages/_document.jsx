@@ -43,6 +43,20 @@ export default function Document() {
           property="twitter:image"
           content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682600618/pranjalshikhar_i8znzx.jpg"
         />
+
+        {/* whatsapp */}
+        <meta property="og:site_name" content="pranjal ✦ developer, designer" />
+        <meta property="og:title" content="pranjal ✦ developer, designer" />
+        <meta
+          property="og:description"
+          content="Developer // Designer // Weeb"
+        />
+        <meta
+          property="og:image"
+          itemprop="image"
+          content="https://res.cloudinary.com/dhtviyhse/image/upload/v1682600618/pranjalshikhar_i8znzx.jpg"
+        />
+        <meta property="og:type" content="website" />
       </Head>
       <body className="back font-out mx-auto bg-[#fffdfd] dark:bg-[#242424] overflow-x-hidden lg:transform-gpu ">
         <Main />
