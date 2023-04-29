@@ -126,11 +126,9 @@ const Experience = () => {
         <div className="flex justify-center space-x-3 md:space-x-6 lg:space-x-8 items-center  my-4">
           <div className="group border-purple-400 hover:bg-purple-400 hover:text-white hover:drop-shadow-2xl text-purple-500 rounded-md md:rounded-xl px-2 py-1 md:px-4 md:py-2 shadow-md drop-shadow-lg dark:bg-purple-400 dark:shadow-none dark:hover:shadow-white select-none dark:text-white shadow-purple-300 ">
             <Link
-              href="#"
+              href="/Pranjal_Shikhar.pdf"
+              target="_blank"
               className="flex items-center font-normal lg:font-bold space-x-2 text-sm md:text-base"
-              onClick={() => {
-                alert("Uploading Soon.. 🍜");
-              }}
             >
               <FiFileText className="dark:stroke-white stroke-purple-400 stroke-2 group-hover:stroke-white " />
               <p>Resume</p>
