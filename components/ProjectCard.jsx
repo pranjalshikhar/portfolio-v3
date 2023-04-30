@@ -21,14 +21,14 @@ const ProjectCard = () => {
       image: kamui,
       title: "Kamui",
       description: "Kanban board for planner with superpowers",
-      link: "http://kamui-kanban.netlify.app/",
+      link: "https://kamui-kanban.netlify.app/",
     },
     {
       id: 3,
       image: pokedex,
       title: "Pokedex",
       description: "Gotta Catch'em All. Explore your Pokemon",
-      link: "",
+      link: "https://pokedex-polly.netlify.app/",
     },
     {
       id: 4,
@@ -42,14 +42,14 @@ const ProjectCard = () => {
       image: cryptohunter,
       title: "Crypto Hunter",
       description: "Get the Trending Crypto list with its Price",
-      link: "http://crytocurrencyhunter.netlify.app/",
+      link: "https://crytocurrencyhunter.netlify.app/",
     },
     {
       id: 6,
       image: redeye,
       title: "Red Eye",
       description: "Question based website to know your movie genre",
-      link: "http://red-eye.netlify.app/",
+      link: "https://red-eye.netlify.app/",
     },
   ];
 
@@ -63,16 +63,12 @@ const ProjectCard = () => {
           >
             <Link
               href={project.link}
-              target={
-                project.title === "Pokedex" || project.title === "Portfolio"
-                  ? ""
-                  : "_blank"
-              }
+              target={project.title === "Portfolio" ? "" : "_blank"}
               onClick={() => {
                 switch (project.title) {
                   case "Pokedex":
                     alert(
-                      "Ash Ketchum asked me to keep it confidential for now.. 🤐"
+                      "Ash Ketchum asked you to open in desktop browser.. 🚀"
                     );
                     break;
                   case "Portfolio":
