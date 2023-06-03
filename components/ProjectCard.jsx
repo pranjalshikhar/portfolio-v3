@@ -5,6 +5,9 @@ import pokedex from "../public/pokedex.jpg";
 import portfolio from "../public/portfolio.jpg";
 import cryptohunter from "../public/crypto-hunter.jpg";
 import redeye from "../public/red-eye.jpg";
+import evo from "../public/evo.jpg";
+import nft from "../public/nft.jpg";
+import nike from "../public/nike.jpg";
 import Link from "next/link";
 
 const ProjectCard = () => {
@@ -14,42 +17,72 @@ const ProjectCard = () => {
       image: aizen,
       title: "Aizen",
       description: "Create beautiful images and gifs of your source code",
-      link: "https://aizen.netlify.app/",
+      link: "/work/aizen",
+      target: "_self",
     },
     {
       id: 2,
       image: kamui,
       title: "Kamui",
       description: "Kanban board for planner with superpowers",
-      link: "https://kamui-kanban.netlify.app/",
+      link: "/work/kamui",
+      target: "_self",
     },
     {
       id: 3,
       image: pokedex,
       title: "Pokedex",
       description: "Gotta Catch'em All. Explore your Pokemon",
-      link: "https://pokedex-polly.netlify.app/",
+      link: "/work/pokedex",
+      target: "_self",
     },
     {
       id: 4,
+      image: evo,
+      title: "Evo Gym",
+      description: "Gym Landing Page",
+      link: "https://evogymm.netlify.app/",
+      target: "_blank",
+    },
+    {
+      id: 5,
+      image: nike,
+      title: "Nike Store",
+      description: "Nike Store Landing Page",
+      link: "https://nikestore-polly.netlify.app/",
+      target: "_blank",
+    },
+    {
+      id: 6,
+      image: nft,
+      title: "NFT Page",
+      description: "NFT Landing Page",
+      link: "https://pranjalshikhar.github.io/nft-landing-page/",
+      target: "_blank",
+    },
+    {
+      id: 7,
       image: portfolio,
       title: "Portfolio",
       description: "Portfolio made using NextJS and Tailwind CSS",
       link: "",
+      target: "",
     },
     {
-      id: 5,
+      id: 8,
       image: cryptohunter,
       title: "Crypto Hunter",
       description: "Get the Trending Crypto list with its Price",
-      link: "https://crytocurrencyhunter.netlify.app/",
+      link: "/work/cryptohunter",
+      target: "_self",
     },
     {
-      id: 6,
+      id: 9,
       image: redeye,
       title: "Red Eye",
       description: "Question based website to know your movie genre",
-      link: "https://red-eye.netlify.app/",
+      link: "/work/redeye",
+      target: "_self",
     },
   ];
 
@@ -63,18 +96,11 @@ const ProjectCard = () => {
           >
             <Link
               href={project.link}
-              target={project.title === "Portfolio" ? "" : "_blank"}
+              target={project.target}
               onClick={() => {
-                switch (project.title) {
-                  case "Pokedex":
-                    alert(
-                      "Ash Ketchum asked you to open in desktop browser.. 🚀"
-                    );
-                    break;
-                  case "Portfolio":
-                    alert("You are already on this site! 🤩");
-                    break;
-                }
+                project.title === "Portfolio"
+                  ? alert("You are already on this site! 🤩")
+                  : "";
               }}
             >
               <Image
