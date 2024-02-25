@@ -1,14 +1,15 @@
 import Image from "next/image";
-import aizen from "../public/aizen.jpg";
-import kamui from "../public/kamui.jpg";
-import pokedex from "../public/pokedex.jpg";
-import portfolio from "../public/portfolio.jpg";
-import cryptohunter from "../public/crypto-hunter.jpg";
-import redeye from "../public/red-eye.jpg";
-import evo from "../public/evo.jpg";
-import nft from "../public/nft.jpg";
-import nike from "../public/nike.jpg";
 import Link from "next/link";
+
+import aizen from "@/public/work/aizen.jpg";
+import kamui from "@/public/work/kamui.jpg";
+import pokedex from "@/public/work/pokedex.jpg";
+import portfolio from "@/public/work/portfolio.jpg";
+import cryptohunter from "@/public/work/crypto-hunter.jpg";
+import redeye from "@/public/work/red-eye.jpg";
+import evo from "@/public/work/evo.jpg";
+import notion from "@/public/work/notion.jpg";
+import nike from "@/public/work/nike.jpg";
 
 const ProjectCard = () => {
   const data = [
@@ -17,7 +18,7 @@ const ProjectCard = () => {
       image: aizen,
       title: "Aizen",
       description: "Create beautiful images and gifs of your source code",
-      link: "/work/aizen",
+      link: "https://aizen.netlify.app/",
       target: "_self",
     },
     {
@@ -25,7 +26,7 @@ const ProjectCard = () => {
       image: kamui,
       title: "Kamui",
       description: "Kanban board for planner with superpowers",
-      link: "/work/kamui",
+      link: "https://kamui-kanban.netlify.app/",
       target: "_self",
     },
     {
@@ -33,7 +34,7 @@ const ProjectCard = () => {
       image: pokedex,
       title: "Pokedex",
       description: "Gotta Catch'em All. Explore your Pokemon",
-      link: "/work/pokedex",
+      link: "https://pokedex-polly.netlify.app/",
       target: "_self",
     },
     {
@@ -54,17 +55,17 @@ const ProjectCard = () => {
     },
     {
       id: 6,
-      image: nft,
-      title: "NFT Page",
-      description: "NFT Landing Page",
-      link: "https://pranjalshikhar.github.io/nft-landing-page/",
+      image: notion,
+      title: "Potion",
+      description: "Connected workspace where better, faster work happens.",
+      link: "https://potion-write.vercel.app/",
       target: "_blank",
     },
     {
       id: 7,
       image: portfolio,
       title: "Portfolio",
-      description: "Portfolio made using NextJS and Tailwind CSS",
+      description: "Portfolio made using Next.js and Tailwind CSS",
       link: "",
       target: "",
     },
@@ -73,7 +74,7 @@ const ProjectCard = () => {
       image: cryptohunter,
       title: "Crypto Hunter",
       description: "Get the Trending Crypto list with its Price",
-      link: "/work/cryptohunter",
+      link: "https://crytocurrencyhunter.netlify.app/",
       target: "_self",
     },
     {
@@ -81,7 +82,7 @@ const ProjectCard = () => {
       image: redeye,
       title: "Red Eye",
       description: "Question based website to know your movie genre",
-      link: "/work/redeye",
+      link: "https://red-eye.netlify.app/",
       target: "_self",
     },
   ];
@@ -100,6 +101,10 @@ const ProjectCard = () => {
               onClick={() => {
                 project.title === "Portfolio"
                   ? alert("You are already on this site! 🤩")
+                  : project.title === "Pokedex"
+                  ? alert(
+                      "Ash Ketchum asked you to open in desktop browser.. 🚀"
+                    )
                   : "";
               }}
             >
@@ -108,14 +113,14 @@ const ProjectCard = () => {
                 src={project.image}
                 alt={project.title}
                 width="200"
-                className="rounded-md drop-shadow-2xl hover:scale-110"
+                className="rounded-lg drop-shadow-2xl hover:scale-110"
               />
             </Link>
             <div className="flex flex-col items-center">
               <h1 className="font-semibold text-[1.5rem] mt-3 text-gray-700 dark:text-white">
                 {project.title}
               </h1>
-              <p className="max-w-[90%] text-gray-400 font-light text-center">
+              <p className="max-w-[90%] text-gray-400 font-light text-center text-sm">
                 {project.description}
               </p>
             </div>

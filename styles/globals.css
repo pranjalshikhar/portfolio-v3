@@ -7,7 +7,7 @@
 }
 
 *::selection {
-  @apply bg-emerald-100 dark:bg-purple-400/70;
+  @apply bg-[#00FFFF] dark:bg-[#f81ce5];
 }
 
 ::-webkit-scrollbar {

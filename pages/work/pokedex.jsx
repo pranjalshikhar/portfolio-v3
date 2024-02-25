@@ -9,9 +9,6 @@ import pokedex1 from "../../public/work/pokedex1.png";
 import pokedex2 from "../../public/work/pokedex2.png";
 
 export default function Pokedex() {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
   return (
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
       <Head>

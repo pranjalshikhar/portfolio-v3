@@ -1,18 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
+
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-import pranjal_header_black from "../public/pranjal-header-black.svg";
-import pranjal_header_white from "../public/pranjal-header-white.svg";
 import Image from "next/image";
+import Link from "next/link";
+
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+
+import pranjal_header_black from "@/public/pranjal-header-black.svg";
+import pranjal_header_white from "@/public/pranjal-header-white.svg";
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const router = useRouter().asPath;
   const [mounted, setMounted] = useState(false);
   let Links = [
+    { name: "timeline", link: "/timeline" },
     { name: "work", link: "/work" },
     { name: "about", link: "/about" },
     { name: "tech", link: "/tech" },
@@ -67,8 +71,10 @@ const Header = () => {
     <nav
       ref={touchRef}
       className={`${
-        isScrolled && "bg-opacity-[0.7] shadow-md drop-shadow-lg "
-      } font-medium duration-500 bg-opacity-90 transition-all linear z-40 dark:text-white w-[75%] sm:w-[75%] md:w-[70%] lg:w-[55%] xl:w-[50%] max-w-6xl mx-auto  bg-white dark:bg-[#353535] drop-shadow-xs backdrop-blur-sm top-4 sticky rounded-2xl `}
+        isScrolled && "bg-opacity-[0.5] shadow-md drop-shadow-lg "
+      } font-medium duration-500 bg-opacity-50 transition-all linear z-40 dark:text-white w-[75%] sm:w-[75%] md:w-[70%] lg:w-[55%] xl:w-[50%] max-w-6xl mx-auto  bg-white dark:bg-[#35353579] ${
+        open && "dark:bg-[#000] bg-opacity-100"
+      } drop-shadow-xs backdrop-blur-sm top-4 sticky rounded-2xl`}
     >
       <div className="flex justify-between md:space-x-10 lg:space-x-12 xl:space-x-16 md:flex items-center place-items-center md:justify-center py-3 md:px-10 px-8">
         <div className="select-none order-2 md:order-1 cursor-pointer flex items-center text-gray-800">
@@ -87,7 +93,7 @@ const Header = () => {
             }}
             className="w-max md:order-8 fill-purple-600 "
           >
-            <MdLightMode className="w-5 h-5 lg:w-6 lg:h-6 fill-white " />{" "}
+            <MdOutlineLightMode className="w-4 h-4 " />{" "}
           </button>
         ) : (
           <button
@@ -96,7 +102,7 @@ const Header = () => {
             }}
             className="w-max md:order-8 fill-purple-600 "
           >
-            <MdDarkMode className="w-5 h-5 lg:w-6 lg:h-6 fill-black " />{" "}
+            <MdOutlineDarkMode className="w-4 h-4" />{" "}
           </button>
         )}
 
@@ -121,41 +127,34 @@ const Header = () => {
           ></div>
         </div>
         <ul
-          className={` rounded-3xl md:rounded-none dark:bg-[#353535] bg-white  py-4 md:py-0 md:bg-inherit font-semibold order-4 md:flex md:items-center md:pb-0 pb-8 absolute md:static bg-light-blue md:bg-none md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 lg:transition-none transition-all duration-500 ease-in ${
+          className={` rounded-3xl md:rounded-none  ${
+            open ? "dark:bg-[#000]" : "dark:bg-[#35353500]"
+          } bg-white  py-4 md:py-0 md:bg-inherit font-semibold order-4 md:flex md:items-center md:pb-0 pb-8 absolute md:static bg-light-blue md:bg-none md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 lg:transition-none transition-all duration-500 ease-in ${
             open ? "top-[3.5rem]" : "top-[-490px]"
           }`}
         >
           {Links.map((link) => (
-            <li
-              key={link.name}
-              className="md:ml-8 text-base lg:text-lg md:my-0 my-7"
-            >
+            <li key={link.name} className="md:ml-8 text-base md:my-0 my-7">
               <Link
                 href={link.link}
                 onClick={() => clickHandler(`${link.name}`)}
                 className={`${
                   router === link.link
-                    ? " text-purple-400 font-semibold "
-                    : " text-gray-700 dark:text-white "
+                    ? " text-purple-400 font-out"
+                    : " text-gray-700 dark:text-white font-out"
                 } hover:text-purple-500 dark:hover:text-purple-500 duration-500`}
               >
-                {link.name}
+                <span>
+                  {link.name}
+                  {link.name === "timeline" && (
+                    <sup className="font-semibold text-[8px] border-sky-100 rounded bg-red-600 px-1 text-white">
+                      1
+                    </sup>
+                  )}
+                </span>
               </Link>
             </li>
           ))}
-          <li
-            key={4}
-            className="md:ml-8  text-base xl:text-[1.1rem] font-regular md:my-0 my-7"
-          >
-            <a
-              href="/Pranjal_Shikhar_Sinha.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-500 duration-500"
-            >
-              resume
-            </a>
-          </li>
         </ul>
       </div>
     </nav>

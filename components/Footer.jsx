@@ -8,6 +8,7 @@ import Behance from "../public/icons/behance@2x.png";
 import Instagram from "../public/icons/instagram@2x.png";
 import Gmail from "../public/icons/google@2x.png";
 import Image from "next/image";
+import Star from "@/public/Star.svg";
 
 const Footer = () => {
   const [metaData, setMetaData] = useState({ star: 0, forks: 0 });
@@ -85,7 +86,7 @@ const Footer = () => {
         href="https://github.com/pranjalshikhar/portfolio-v3"
         target="blank"
         rel="noreferrer"
-        className="flex flex-col text-center group hover:text-purple-800 w-max hover:font-black items-center text-gray-600 text-[0.6rem] sm:text-xs md:text-sm lg:text-md mt-8 md:mt-12 "
+        className="flex flex-col text-center group hover:text-purple-800 w-max hover:font-black items-center text-gray-600 text-[0.6rem] sm:text-xs md:text-sm lg:text-md mt-8 md:mt-12 font-syne"
       >
         <div
           onMouseOut={handleMouseOut}
@@ -101,9 +102,13 @@ const Footer = () => {
           </p>
           {isHovering && (
             <p
-              className={`opacity-0 bg-purple-100 px-1 md:px-2 py-1 rounded-2xl bg-opacity-30 backdrop-blur-xl hover:opacity-100 transition-all duration-1000 linear absolute top-[35%] left-[50%] -translate-x-[50%]  -translate-y-[50%] w-max text-gray-800 font-bold text-base z-10 `}
+              className={`opacity-0 bg-purple-100 px-1 md:px-2 py-1 rounded-2xl bg-opacity-30 backdrop-blur-xl hover:opacity-100 transition-all duration-1000 linear absolute top-[35%] left-[50%] -translate-x-[50%]  -translate-y-[50%] w-max text-gray-800 font-bold text-base z-10 flex text-center`}
             >
-              Amazing ? ⭐ my Github Repo
+              <span>Amazing ?</span>
+              <span className="px-1">
+                <Image src={Star} alt="star" className="h-5 w-5" />
+              </span>
+              <span>Github Repo</span>
             </p>
           )}
         </div>

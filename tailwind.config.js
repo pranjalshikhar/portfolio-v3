@@ -54,6 +54,25 @@ module.exports = {
           "70%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        wiggle: {
+          "0%": { transform: "translateY(0px)" },
+          "10%": { transform: "translateY(30px) rotate(10deg)" },
+          "20%": { transform: "translateY(60px) rotate(20deg)" },
+          "30%": { transform: "translateY(90px) rotate(30deg)" },
+          "40%": { transform: "translateY(120px) rotate(20deg)" },
+          "50%": { transform: "translateY(150px) rotate(30deg)" },
+          "60%": { transform: "translateY(120px) rotate(40deg)" },
+          "70%": { transform: "translateY(90px) rotate(10deg)" },
+          "80%": { transform: "translateY(60px) rotate(20deg)" },
+          "90%": { transform: "translateY(30px) rotate(10deg)" },
+          "100%": { transform: "translateY(0px)" },
+        },
+        hero: {
+          "25%": { transform: "rotate(-0.01turn)" },
+          "50%": { transform: "rotate(0.01turn)" },
+          "75%": { transform: "rotate(-0.01turn)" },
+          "100%": { transform: "rotate(0.01turn)" },
+        },
       },
       animation: {
         text: "text 5s ease infinite",
@@ -62,6 +81,8 @@ module.exports = {
         mainBlob3: "mainBlob3 8s ease alternate infinite",
         heroBlob: "heroBlob 20s linear alternate-reverse infinite",
         handWave: "wave 1.5s infinte",
+        wiggle: "wiggle 10s linear infinite",
+        hero: "5s infinite 0.1s hero",
       },
 
       fontFamily: {
@@ -69,6 +90,8 @@ module.exports = {
         deca: ["Lexend Deca", "Inter", "sans-serif"],
         app: ["Homemade Apple", "cursive"],
         out: ["Outfit", "Inter", "sans-serif"],
+        syne: ["Syne", "sans-serif"],
+        gloria: ["Gloria Hallelujah", "cursive"],
       },
     },
   },
