@@ -30,7 +30,7 @@ export default function Wok() {
           </h2>
           <p className="mt-8 max-w-xl text-center md:w-[70%] mx-auto text-sm md:text-base lg:text-xl mb-2 px-2">
             It has been an absolute pleasure to put my heart and soul into these
-            projects. While you're here, browse these projects.
+            projects. While you&apos;re here, browse these projects.
           </p>
           <div className="select-none flex justify-center space-x-4 items-center mt-2 text-gray-400">
             <svg

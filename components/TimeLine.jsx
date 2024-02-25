@@ -68,8 +68,10 @@ const TimeLine = () => {
             </time>
             <p>{item.org}</p>
             <div className="flex flex-wrap mt-8">
-              {item.skills.map((i) => (
-                <span className={`${item.class}`}>{i}</span>
+              {item.skills.map((i, idx) => (
+                <span key={idx} className={`${item.class}`}>
+                  {i}
+                </span>
               ))}
             </div>
           </li>
