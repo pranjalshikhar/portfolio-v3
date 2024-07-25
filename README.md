@@ -7,5 +7,5 @@
 - [React JS 18](https://react.dev/) 🍻
 - [TailwindCSS](https://tailwindcss.com/) ✨
 
-## Repo Stats
-[![Protfolio](https://github-readme-stats.vercel.app/api/pin/?username=pranjalshikhar&repo=portfolio-v3&show_owner=true)](https://github.com/pranjalshikhar/portfolio-v3)
+## ⭐ Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=pranjalshikhar/portfolio-v3&type=Date)](https://github.com/pranjalshikhar/portfolio-v3/)
