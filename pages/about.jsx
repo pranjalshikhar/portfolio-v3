@@ -7,8 +7,7 @@ import Image from "next/image";
 import CategoryCard from "@/components/CategoryCard";
 
 import Flash from "@/public/Flash.svg";
-import HeroBlack from "@/public/hero-black.png";
-import HeroWhite from "@/public/hero-white.png";
+import Hero from "@/public/hero.jpg";
 import Rocket from "@/public/Rocket.svg";
 import Sparkles from "@/public/Sparkles.svg";
 import love_black from "@/public/love-black.svg";
@@ -42,7 +41,7 @@ export default function About() {
             </h1>
             <div className="mx-auto transition-all duration-1000 ease-in-out -mt-8">
               <Image
-                src={currentTheme === "dark" ? HeroBlack : HeroWhite}
+                src={Hero}
                 height={800}
                 width={800}
                 className="select-none h-40 w-40"

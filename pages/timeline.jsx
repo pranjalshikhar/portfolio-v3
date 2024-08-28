@@ -13,7 +13,7 @@ const Timeline = () => {
         <div className="pt-24 flex flex-col items-cen mx-auto">
           <h2
             className={
-              "selection:text-black/40 dark:selection:text-white/40 bg-gradient-to-r from-teal-200 to-lime-200 bg-clip-text text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold"
+              "selection:text-black/40 dark:selection:text-white/40 bg-gradient-to-r from-emerald-600 to-teal-400 bg-clip-text text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold"
             }
           >
             Timeline
